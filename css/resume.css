@@ -1,0 +1,201 @@
+.resume {
+    font-family: 'Roboto', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.resume-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.resume-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.resume-title {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 1rem;
+}
+
+.resume-contact {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.resume-contact-left, .resume-contact-right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.resume-contact-left {
+    align-items: flex-start;
+}
+.resume-contact-right {
+    align-items: flex-end;
+}
+@media (max-width: 600px) {
+    .resume-contact {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .resume-contact-left, .resume-contact-right {
+        align-items: flex-start;
+    }
+}
+
+.resume-contact-item {
+    display: flex;
+    align-items: center;
+}
+
+.resume-contact-item i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+.resume-section {
+    margin-bottom: 1.5rem;
+}
+
+.resume-section-title {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    border-bottom: 1px solid #ecf0f1;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.resume-summary {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.resume-experience-item,
+.resume-education-item {
+    margin-bottom: 1.5rem;
+}
+
+.resume-job-header,
+.resume-education-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.resume-job-title,
+.resume-degree {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.resume-company,
+.resume-institution {
+    font-style: italic;
+}
+
+.resume-date {
+    color: #7f8c8d;
+}
+
+.resume-job-description {
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+    border-left: 2px solid #ecf0f1;
+}
+
+.resume-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.resume-skill {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+.resume-certification-item {
+    margin-bottom: 1.5rem;
+}
+.resume-cert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.resume-cert-header .resume-cert-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.resume-cert-name {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+.resume-cert-issuer {
+    font-style: italic;
+    margin-left: 0.3rem;
+}
+.resume-cert-header .resume-date {
+    color: #7f8c8d;
+    font-size: 0.98em;
+    margin-left: 1rem;
+    white-space: nowrap;
+}
+.resume-cert-description {
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+    border-left: 2px solid #ecf0f1;
+    color: #555;
+    font-size: 0.97em;
+}
+
+/* Theme variations */
+.resume.professional {
+    --primary-color: #3498db;
+}
+
+.resume.modern {
+    --primary-color: #2ecc71;
+}
+
+.resume.creative {
+    --primary-color: #9b59b6;
+}
+
+.resume.minimal {
+    --primary-color: #2c3e50;
+}
+
+/* Color scheme variations */
+.resume.blue {
+    --primary-color: #3498db;
+}
+
+.resume.green {
+    --primary-color: #2ecc71;
+}
+
+.resume.red {
+    --primary-color: #e74c3c;
+}
+
+.resume.purple {
+    --primary-color: #9b59b6;
+}
+
+.resume.gray {
+    --primary-color: #7f8c8d;
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/resume.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="app-header">
+        <h1>Resume Generator</h1>
+        <p>Create a professional resume in minutes</p>
+    </header>
+
+    <main class="app-container">
+        <section class="form-section">
+            <form id="resumeForm">
+                <div class="form-group collapsible">
+                    <div class="collapsible-header">
+                        <h2>Personal Information</h2>
+                        <button type="button" class="collapse-toggle" aria-expanded="true" aria-controls="personalInfoSection">&#9660;</button>
+                    </div>
+                    <div class="collapsible-content" id="personalInfoSection">
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" required>
+                            </div>
+                            <div class="form-col">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-col">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="linkedin">LinkedIn</label>
+                                <input type="url" id="linkedin" placeholder="https://">
+                            </div>
+                            <div class="form-col">
+                                <label for="portfolio">Portfolio/GitHub</label>
+                                <input type="url" id="portfolio" placeholder="https://">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group collapsible">
+                    <div class="collapsible-header">
+                        <h2>Professional Summary</h2>
+                        <button type="button" class="collapse-toggle" aria-expanded="true" aria-controls="summarySection">&#9660;</button>
+                    </div>
+                    <div class="collapsible-content" id="summarySection">
+                        <textarea id="summary" rows="4" placeholder="Briefly describe your professional background and skills..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group collapsible">
+                    <div class="collapsible-header">
+                        <h2>Work Experience</h2>
+                        <button type="button" class="collapse-toggle" aria-expanded="true" aria-controls="experienceSection">&#9660;</button>
+                    </div>
+                    <div class="collapsible-content" id="experienceSection">
+                        <div id="experienceFields">
+                            <div class="experience-entry">
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <label>Job Title</label>
+                                        <input type="text" class="jobTitle" required>
+                                    </div>
+                                    <div class="form-col">
+                                        <label>Company</label>
+                                        <input type="text" class="company" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <label>Start Date</label>
+                                        <input type="month" class="startDate">
+                                    </div>
+                                    <div class="form-col">
+                                        <label>End Date</label>
+                                        <input type="month" class="endDate">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <label>Description</label>
+                                        <textarea class="jobDescription" rows="3"></textarea>
+                                    </div>
+                                </div>
+                                <button type="button" class="remove-experience">Remove</button>
+                            </div>
+                        </div>
+                        <button type="button" id="addExperience" class="btn-secondary">Add Another Position</button>
+                    </div>
+                </div>
+
+                <div class="form-group collapsible">
+                    <div class="collapsible-header">
+                        <h2>Education</h2>
+                        <button type="button" class="collapse-toggle" aria-expanded="true" aria-controls="educationSection">&#9660;</button>
+                    </div>
+                    <div class="collapsible-content" id="educationSection">
+                        <div id="educationFields">
+                            <div class="education-entry">
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <label>Degree</label>
+                                        <input type="text" class="degree" required>
+                                    </div>
+                                    <div class="form-col">
+                                        <label>Institution</label>
+                                        <input type="text" class="institution" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <label>Year Completed</label>
+                                        <input type="month" class="educationDate">
+                                    </div>
+                                </div>
+                                <button type="button" class="remove-education">Remove</button>
+                            </div>
+                        </div>
+                        <button type="button" id="addEducation" class="btn-secondary">Add Another Education</button>
+                    </div>
+                </div>
+
+                <div class="form-group collapsible">
+                    <div class="collapsible-header">
+                        <h2>Certifications</h2>
+                        <button type="button" class="collapse-toggle" aria-expanded="true" aria-controls="certificationsSection">&#9660;</button>
+                    </div>
+                    <div class="collapsible-content" id="certificationsSection">
+                        <div id="certificationFields">
+                            <div class="certification-entry">
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <label>Certification Name</label>
+                                        <input type="text" class="certificationName" required>
+                                    </div>
+                                    <div class="form-col">
+                                        <label>Issuer</label>
+                                        <input type="text" class="certificationIssuer" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <label>Date</label>
+                                        <input type="month" class="certificationDate">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-col">
+                                        <label>Description</label>
+                                        <textarea class="certificationDescription" rows="2"></textarea>
+                                    </div>
+                                </div>
+                                <button type="button" class="remove-certification">Remove</button>
+                            </div>
+                        </div>
+                        <button type="button" id="addCertification" class="btn-secondary">Add Another Certification</button>
+                    </div>
+                </div>
+
+                <div class="form-group collapsible">
+                    <div class="collapsible-header">
+                        <h2>Skills</h2>
+                        <button type="button" class="collapse-toggle" aria-expanded="true" aria-controls="skillsSection">&#9660;</button>
+                    </div>
+                    <div class="collapsible-content" id="skillsSection">
+                        <div id="skillsContainer">
+                            <div class="skill-tags">
+                                <input type="text" id="skillInput" placeholder="Add a skill and press Enter">
+                            </div>
+                            <div class="skill-list" id="skillList"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group collapsible">
+                    <div class="collapsible-header">
+                        <h2>Customization</h2>
+                        <button type="button" class="collapse-toggle" aria-expanded="true" aria-controls="customizationSection">&#9660;</button>
+                    </div>
+                    <div class="collapsible-content" id="customizationSection">
+                        <div class="form-row">
+                            <div class="form-col">
+                                <label for="resumeTheme">Resume Theme</label>
+                                <select id="resumeTheme">
+                                    <option value="professional">Professional</option>
+                                    <option value="modern">Modern</option>
+                                    <option value="creative">Creative</option>
+                                    <option value="minimal">Minimal</option>
+                                </select>
+                            </div>
+                            <div class="form-col">
+                                <label for="colorScheme">Color Scheme</label>
+                                <select id="colorScheme">
+                                    <option value="blue">Blue</option>
+                                    <option value="green">Green</option>
+                                    <option value="red">Red</option>
+                                    <option value="purple">Purple</option>
+                                    <option value="gray">Gray</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" id="resetForm" class="btn-secondary">Reset Form</button>
+                    <button type="submit" class="btn-primary">Update Preview</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="preview-section">
+            <div class="preview-header">
+                <h2>Resume Preview</h2>
+                <button id="downloadPdf" class="btn-download">Download as PDF</button>
+            </div>
+            <div class="resume-paper" id="resumePreview">
+                <!-- Resume content will be generated here -->
+                <div class="resume-placeholder">
+                    <p>Fill out the form to see your resume preview</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <p>© 2025 Resume Generator | Designed with love from Bhuvan for job seekers</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
