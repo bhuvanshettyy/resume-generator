@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const skillList = document.getElementById('skillList');
     const resetFormBtn = document.getElementById('resetForm');
     const downloadPdfBtn = document.getElementById('downloadPdf');
-    const resumeTheme = document.getElementById('resumeTheme');
     const colorScheme = document.getElementById('colorScheme');
     const resumePreview = document.getElementById('resumePreview');
 
@@ -218,7 +217,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Theme and color scheme changes
-    resumeTheme.addEventListener('change', updateResumePreview);
     colorScheme.addEventListener('change', updateResumePreview);
 
     // Collapsible sections logic
@@ -306,11 +304,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Get selected theme and color
-        const theme = resumeTheme.value;
         const color = colorScheme.value;
 
         // Generate HTML for the resume
-        resumePreview.innerHTML = generateResumeHTML(formData, theme, color);
+        resumePreview.innerHTML = generateResumeHTML(formData, color);
     }
 
     // Helper function to format date (MM/YYYY)
@@ -325,7 +322,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Function to generate the resume HTML
-    function generateResumeHTML(data, theme, color) {
+    function generateResumeHTML(data, color) {
         let experiencesHTML = '';
         let educationHTML = '';
         let skillsHTML = '';
@@ -406,7 +403,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Combine all parts
         return `
-            <div class="resume ${theme} ${color}">
+            <div class="resume ${color}">
                 <div class="resume-header">
                     <h1 class="resume-name">${data.personal.firstName} ${data.personal.lastName}</h1>
                     <div class="resume-contact">

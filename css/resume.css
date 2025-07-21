@@ -162,23 +162,6 @@
     font-size: 0.97em;
 }
 
-/* Theme variations */
-.resume.professional {
-    --primary-color: #3498db;
-}
-
-.resume.modern {
-    --primary-color: #2ecc71;
-}
-
-.resume.creative {
-    --primary-color: #9b59b6;
-}
-
-.resume.minimal {
-    --primary-color: #2c3e50;
-}
-
 /* Color scheme variations */
 .resume.blue {
     --primary-color: #3498db;
