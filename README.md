@@ -28,4 +28,11 @@ A responsive web application that allows users to create professional resumes by
 5. View your resume preview updating in real-time
 6. Click "Download as PDF" to save your resume (mock functionality in this demo)
 
-## Project Structure
+## Future Enhancements
+
+- Actual PDF generation functionality
+- More template options
+- Ability to save and load resume data
+- Sharing functionality
+- Cover letter generator
+- Integration with LinkedIn for auto-filling data
